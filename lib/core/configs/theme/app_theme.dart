@@ -24,4 +24,14 @@ class AppTheme {
       thumbColor: const Color(0xffB7B7B7)
     )
     );
+
+    static ScreenSize getScreenSize(BuildContext context) {
+      return ScreenSize(width: MediaQuery.sizeOf(context).width, height: MediaQuery.sizeOf(context).height);
+    }
+}
+
+class ScreenSize {
+  final width;
+  final height;
+  const ScreenSize({required this.width, required this.height});
 }
