@@ -3,9 +3,22 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallpapers_app_ui/core/configs/assets/app_vectors.dart';
 import 'package:wallpapers_app_ui/core/configs/theme/app_colors.dart';
 import 'package:wallpapers_app_ui/core/configs/theme/app_theme.dart';
+import 'package:wallpapers_app_ui/presentation/home/pages/home.dart';
 import 'package:wallpapers_app_ui/presentation/splash/widgets/loading_indicator.dart';
-class SplashPage extends StatelessWidget {
+
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+@override
+  void initState() {
+    super.initState();
+    redirect();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,5 +87,15 @@ class SplashPage extends StatelessWidget {
           )
       )
     );    
+  }
+
+  Future<void> redirect() async {
+    await Future.delayed(const Duration(seconds: 5));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => const HomePage()
+      )
+    );
   }
 }

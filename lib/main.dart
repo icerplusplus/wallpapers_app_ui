@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wallpapers_app_ui/core/configs/theme/app_theme.dart';
-import 'package:wallpapers_app_ui/presentation/splash/page/splash_page.dart';
+import 'package:wallpapers_app_ui/presentation/splash/pages/splash_page.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() {
