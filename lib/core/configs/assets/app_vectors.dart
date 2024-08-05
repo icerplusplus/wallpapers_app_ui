@@ -31,6 +31,7 @@ class AppVectors {
   static const String settingActive = '${basePath}setting_active$format';
   static const String share = '${basePath}share$format';
   static const String syncCompleted = '${basePath}sync_completed$format';
-  static const String trending = '${basePath}trending_active$format';
+  static const String trending = '${basePath}trending$format';
+  static const String trendingActive = '${basePath}trending_active$format';
   static const String noImages = '${basePath}no_images$format';
 }

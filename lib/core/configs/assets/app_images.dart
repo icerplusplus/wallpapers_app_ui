@@ -7,7 +7,7 @@ class AppImages {
 
   // heros path
   static const String heroPath = 'heros/';
-  
+
   // wallpapers path
   static const String wallpaperPath = 'wallpapers/';
 
@@ -31,4 +31,49 @@ class AppImages {
   static const String travel = '$basePath${categoryPath}travel$format';
   static const String wildlife = '$basePath${categoryPath}wildlife$format';
 
+  // mock category data card
+  static const List<CategoryType> categories = [
+    CategoryType(title: 'abstract', imageUrl: abstract),
+    CategoryType(title: 'gaming', imageUrl: gaming),
+    CategoryType(title: 'music', imageUrl: music),
+    CategoryType(title: 'girl', imageUrl: girl),
+    CategoryType(title: 'art', imageUrl: art),
+    CategoryType(title: 'beach', imageUrl: beach),
+    CategoryType(title: 'bicycle', imageUrl: bicycle),
+    CategoryType(title: 'bike', imageUrl: bike),
+    CategoryType(title: 'car', imageUrl: car),
+    CategoryType(title: 'food', imageUrl: food),
+    CategoryType(title: 'god', imageUrl: god),
+    CategoryType(title: 'nature', imageUrl: nature),
+    CategoryType(title: 'plane', imageUrl: plane),
+    CategoryType(title: 'plant', imageUrl: plant),
+    CategoryType(title: 'rain', imageUrl: rain),
+    CategoryType(title: 'space', imageUrl: space),
+    CategoryType(title: 'travel', imageUrl: travel),
+    CategoryType(title: 'wildlife', imageUrl: wildlife),
+  ];
+
+  // all mock heros data
+  static const List<String> heros = [
+    '$basePath${heroPath}hero_1$format',
+    '$basePath${heroPath}hero_2$format',
+    '$basePath${heroPath}hero_3$format',
+  ];
+
+  // mock wallpapers data
+  static const List<String> wallpapers = [
+    '$basePath${wallpaperPath}wallpaper_1$format',
+    '$basePath${wallpaperPath}wallpaper_2$format',
+    '$basePath${wallpaperPath}wallpaper_3$format',
+    '$basePath${wallpaperPath}wallpaper_4$format',
+    '$basePath${wallpaperPath}wallpaper_5$format',
+    '$basePath${wallpaperPath}wallpaper_6$format',
+  ];
+}
+
+class CategoryType {
+  final String title;
+  final String imageUrl;
+
+  const CategoryType({required this.title, required this.imageUrl});
 }

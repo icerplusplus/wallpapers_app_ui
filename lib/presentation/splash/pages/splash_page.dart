@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallpapers_app_ui/core/configs/assets/app_vectors.dart';
@@ -23,6 +25,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.darkBackground,
       body: SafeArea(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,12 +48,14 @@ class _SplashPageState extends State<SplashPage> {
                             'WallyMax',
                             style: TextStyle(
                               fontSize: 24,
-                              fontWeight: FontWeight.bold
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.textMain // TODO: add theme mode
                             )
                           ),
                           Text(' - 4K Wallpapers',
                             style: TextStyle(
                               fontSize: 24,
+                              color: AppColors.textMain // TODO: add theme mode
                             )
                           ),
                         ],
@@ -91,7 +96,12 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> redirect() async {
     await Future.delayed(const Duration(seconds: 5));
-    Navigator.pushReplacement(
+    // Timer(const Duration(milliseconds: 5000), () {
+    //   Navigator.of(context).pushReplacement(
+    //     MaterialPageRoute(builder: (context) => const HomePage()),
+    //   );
+    // });
+    Navigator.push(
       context,
       MaterialPageRoute(
         builder: (BuildContext context) => const HomePage()

@@ -13,7 +13,7 @@ class AppTheme {
     );
 
     static final darkTheme = ThemeData(
-    primaryColor: AppColors.lightBackground,
+    primaryColor: AppColors.darkBackground,
     scaffoldBackgroundColor: AppColors.darkBackground,
     brightness: Brightness.dark,
     fontFamily: 'Poppins',
