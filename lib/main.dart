@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wallpapers_app_ui/core/configs/theme/app_theme.dart';
-import 'package:wallpapers_app_ui/presentation/home/pages/home.dart';
 import 'package:wallpapers_app_ui/presentation/splash/pages/splash_page.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      title: 'Wallpapers App Demo',
+      title: 'Wallpapers App',
       theme: AppTheme.lightTheme,
       // darkTheme: AppTheme.darkTheme,
       home: const SplashPage(),
